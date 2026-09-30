@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gristcode"
+version = "0.1.0"
+description = "Render a Grist document as readable Python source, offline, straight from the .grist file. Standard library only."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Younes Z." }]
+keywords = [
+  "grist",
+  "spreadsheet",
+  "schema",
+  "formulas",
+  "sqlite",
+  "code view",
+  "documentation",
+  "self hosted",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: End Users/Desktop",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Database",
+  "Topic :: Office/Business :: Financial :: Spreadsheet",
+  "Topic :: Utilities",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/Rezarys/gristcode"
+Issues = "https://github.com/Rezarys/gristcode/issues"
+
+[project.scripts]
+gristcode = "gristcode.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
